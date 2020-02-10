@@ -16,14 +16,15 @@ $(function() {
       }),
       success : function(data) {
         message(data.answer, data.timestamp, 'a_box');
+        $(document).scrollTop($(document).height());
       }
     });
 
     $('#question').val("");
 
-    $('body').delay(100).animate({
+/*     $('body').delay(100).animate({
       scrollTop: $(document).height()
-    },1500);
+    },1500); */
 
     return false;
   });
